@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Cadastro de Filmes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+ <ion-list>
+  <ion-item>
+    <ion-label>Nome</ion-label>
+    <ion-input [(ngModel)]="filme.nome"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Ano</ion-label>
+    <ion-input [(ngModel)]="filme.ano"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Sinopse</ion-label>
+    <ion-input [(ngModel)]="filme.sinopse" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Data de Lançamento</ion-label>
+    <ion-datetime [(ngModel)]="filme.dataLancamento"
+            displayFormat="DD/MM/YYYY"
+            cancelText="Cancelar"
+            doneText="Selecionar"></ion-datetime>
+  </ion-item>
+ </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="salvar()">
+      <ion-icon name="checkmark"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
+ 
